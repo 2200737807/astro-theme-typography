@@ -7,9 +7,9 @@ export const defaultConfig: ThemeConfig = {
   site: {
     title: '绘念小窝',
     subtitle: '脏东西很多的',
-    author: 'Moeyua',
+    author: 'HuiNian',
     description: 'Rediscory the beauty of typography',
-    website: 'https://astro-theme-typography.vercel.app/',
+    website: 'https://b.103000.vip/',
     pageSize: 5,
     socialLinks: [
       {
