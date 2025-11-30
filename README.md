@@ -10,10 +10,6 @@
 <b>此主题系 Hexo 主题 <a href="https://github.com/sumimakito/hexo-theme-typography">活版印字</a> 在 Astro 平台上的移植版本</b>
 </h5>
 
-<p align='center'>
-<a href="./README.md">English</a> |<b>简体中文</b>
-</p>
-
 ## 特性
 
 - 使用 **Astro**、**TypeScript** 和 **UnoCSS** 构建。
