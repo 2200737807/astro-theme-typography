@@ -1,85 +1,85 @@
-# Typography
+# 活版印字
 
 <p align='center'>
   <img src='./public/typograph-og.jpg' alt='Typography' width='600'/>
 </p>
-
 <h6 align='center'>
-<a href="https://astro-theme-typography.vercel.app/">Live Demo</a>
+<a href="https://astro-theme-typography.vercel.app/">在线预览</a>
 </h6>
 <h5 align='center'>
-<b>This work is rewrite from <a href="https://github.com/sumimakito/hexo-theme-typography">hexo-theme-Typography</a></b>
+<b>此主题系 Hexo 主题 <a href="https://github.com/sumimakito/hexo-theme-typography">活版印字</a> 在 Astro 平台上的移植版本</b>
 </h5>
+
 <p align='center'>
-<b>English</b> | <a href="./README.zh-CN.md">简体中文</a>
+<a href="./README.md">English</a> |<b>简体中文</b>
 </p>
 
-## Features
+## 特性
 
-- Build with **Astro**, **TypeScript** and **UnoCSS**
-- **Fast**. 100% [Pagespeed Score](https://pagespeed.web.dev/analysis/https-astro-theme-typography-vercel-app/j34nq9tx0s?form_factor=desktop).
-- **Typography** Derived from prevalent Chinese typographic norms and aims to provide an enhanced reading experience for website visitors.
-- **Responsive**. Responsive and works well on all screen sizes.
-- **Accessible**. A well thought out semantic and accessible content.
-- **SEO friendly**.Open Graph and Twitter Cards support for a better social sharing experience.
-- **Sitemap** and **RSS feed** for search engines.
-- i18n support.
-- Support Disqus, Giscus, Twikoo as comment service.
-- Dark mode support.
+- 使用 **Astro**、**TypeScript** 和 **UnoCSS** 构建。
+- **快速**:100% [Pagespeed Score](https://pagespeed.web.dev/analysis/https-astro-theme-typography-vercel-app/j34nq9tx0s?form_factor=desktop)。
+- **排版**: 根据流行的中文排版规范派生出的排版，旨在为网站访客提供更佳的阅读体验。
+- **响应式**: 响应式设计，适用于所有屏幕尺寸。
+- **易访问**: 深思熟虑的语义和易访问内容。
+- **SEO 友好**: 支持 **Open Graph** 和 **Twitter Cards**，提供更好的社交分享体验。
+- 为搜索引擎提供 **站点地图** 和 **RSS** 订阅。
+- 支持 i18n 国际化。
+- 支持 Disqus、Giscus、Twikoo 作为评论服务。
+- 支持暗色模式。
 
 ## Demo
 
-> Submit a PR to add your blog Demo.
+> 提交一个 PR 来添加你的博客 Demo。
 
 - [Live Demo](https://astro-theme-typography.vercel.app/)
 - [My Blog](https://blog.moeyua.com/)
-- [Julyfun's Blog (how to fully build this blog using `bun` in minutes)](https://julyfun.fun/posts/%E5%85%89%E9%80%9F%E6%90%AD%E5%BB%BA%E8%BF%99%E6%A0%B7%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/)
+- [Julyfun's Blog (用 `bun` 光速搭建这样一个带域名博客)](https://julyfun.fun/posts/%E5%85%89%E9%80%9F%E6%90%AD%E5%BB%BA%E8%BF%99%E6%A0%B7%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/)
 - [Jinx's Blog](https://blog.mytest.cc/)
-- [Unconventional Reading Notes](https://books.beyondxin.top/)
+- [不那么正经的读书笔记](https://books.beyondxin.top/)
 
-## Getting Started
+## 开始使用
 
-Typography is a minimal, responsive and SEO-friendly Astro blog theme. This guide will help you get started with a new project.
+这是一个轻巧、响应式设计且对 SEO 友好的 Astro 博客主题。本指南将帮助您开始一个新项目。
 
-### Quick Start
+### 快速开始
 
-You can fork the repository to your account by clicking the Fork button in the upper right corner, click the button below, select the repository you just forked, click the Import button, and you will be taken to the project configuration page.
+您可以通过点击右上角的 Fork 按钮，将仓库克隆到你的账号下，点击下面的按钮，选择你刚刚 Fork 的仓库，点击 Import 按钮，即可进入到项目配置页面。
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start)
 
-Or you can refer to the [Astro](https://docs.astro.build/guides/deploy/) documentation to deploy to your favorite platform.
+或者你也可以参考[Astro](https://docs.astro.build/zh-cn/guides/deploy/)的文档，部署到你喜欢的平台。
 
-### Add post
+### 添加文章
 
-You can add content by creating a new markdown file in `src/content/posts`. The file need metadata in the frontmatter, like this:
+您可以通过在 `src/content/posts`中创建一个新的文件来添加内容。该文件需要前面的元数据，如下所示：
 
 ```md
 ---
 title: title
 pubDate: 2021-08-01
-categories: ["article"]
-description: "description"
+categories: ['article']
+description: 'description'
 ---
 ```
 
-Or, you can use the following command in your terminal to create a new post:
+或者，您可以在终端中使用以下命令创建新帖子：
 
 ```bash
 pnpm theme:create
 ```
 
-## Updating the theme
+## 更新主题
 
-You can simply [`Sync Fork`](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) on your own forked project (do not click Discard Changes, otherwise you will lose your own changes).
+您只需在自己 Fork 的项目上 [`Sync Fork`](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) 即可（不要点击 Discard Changes，否则会丢失你自己的更改）。
 
-## Customization
+## 定制化
 
-Typography is highly customizable. The default configuration file is [src/.config/default.ts](src/.config/default.ts), you can override the default configuration in [src/.config/user.ts](src/.config/user.ts) as needed.
+「活版印字」主题是高度可定制的。默认配置文件为 [src/.config/default.ts](src/.config/default.ts)，您可以根据需要在 [src/.config/user.ts](src/.config/user.ts) 中覆盖默认配置。
 
-### Social links
+### 社交链接
 
-Typography has built-in support for adding links to your social media accounts to the site via the social option in the config file:
+「活版印字」主题内置支持通过配置文件中的社交选项将指向您的社交媒体帐户的链接添加到网站：
 
 ```ts
 socials: [
@@ -90,79 +90,77 @@ socials: [
 ]
 ```
 
-The `name` is the icon name in [Material Design Icons](https://pictogrammers.com/library/mdi/),
-which will be automatically generated as the icon.
+字段 `name` 是 [Material Design Icons](https://pictogrammers.com/library/mdi/) 中的图标名称，将自动生成为图标。
 
-> Note that you need to restart the development server to see the changes.
+> 请注意，您需要重新启动开发服务器才能看到更改。
 
-### Navigation links
+### 导航链接
 
-By default, the navigation are `Posts`, `Archive`, `Categories` and `About`. You can add more in the config file:
+默认情况下，导航是「文章」、「归档」、「分类」和「关于」。您可以在配置文件中添加更多内容：
 
 ```ts
-{
-  navs: [
-    {
-      name: 'Categories',
-      href: '/categories'
-    }
-  ]
-}
+navs: [
+  {
+    name: 'Categories',
+    href: '/categories'
+  }
+]
 ```
 
-And then add the corresponding page in `src/pages`, see more in [Astro Pages](https://docs.astro.build/en/core-concepts/astro-pages/)
+然后在`src/page`中添加相应的页面，在 [Astro Pages](https://docs.astro.build/en/core-concepts/astro-pages/)中查看更多
 
-### Dark mode
+### 黑暗模式
 
-Typography supports dark mode. You can change it in the config file:
+「活版印字」主题支持深色模式。您可以在配置文件中更改它：
 
 ```ts
 themeStyle: 'dark' // 'light' | 'dark' | 'system'
 ```
 
-### Internationalization (i18n)
+### 国际化 (i18n)
 
-Typography provides built-in support for multilingual sites. By default, the language is `en-us`, you can change it in the config file:
+「活版印字」主题为多语言站点提供内置支持。默认情况下，语言为'en-us'，您可以在配置文件中更改它：
 
 ```ts
 locale: 'zh-cn'
 ```
 
-For now, Typography supports below languages:
+目前，「活版印字」主题支持以下语言：
 
 - `en-us`
 - `zh-cn`
 - `zh-tw`
 - `ja-jp`
-- `it-it`
 
-You can see all supported languages in [src/i18n.ts](src/i18n.ts), and add more if you need.
+您可以在[src/i18n.ts](src/i18n.ts)中查看所有支持的语言，并根据需要添加更多。
 
-### Comment
+### 评论
 
-Typography supports multiple comment services, currently supports [Disqus](https://disqus.com/), [Giscus](https://giscus.app/) and [Twikoo](https://twikoo.js.org/).
+「活版印字」主题支持多种评论服务，目前支持 [Disqus](https://disqus.com/)、[Giscus](https://giscus.app/) 和 [Twikoo](https://twikoo.js.org/)。
 
-Enable the corresponding comment service by adding the configuration to the config file, when you fill in multiple comment services, only the first service will be displayed.
+通过添加配置文件来启用对应的评论服务，填写多个评论服务时，只会按照顺序显示第一个服务。
 
 #### Disqus
 
-You can enable Disqus by adding the following configuration to the config file:
+在配置文件中添加您的 [Disqus](https://disqus.com/) Shortname：
 
 ```ts
-comments: {
-  disqus: {
-    shortname: 'your-disqus-shortname'
+{
+  comments: {
+    disqus: {
+      shortname: 'your-disqus-shortname'
+    }
   }
 }
 ```
 
-#### Giscus
+### Giscus
 
-Based on the [Giscus web component](https://github.com/giscus/giscus-component?tab=readme-ov-file#using-the-web-component) implementation.
+基于 [Giscus web component](https://github.com/giscus/giscus-component?tab=readme-ov-file#using-the-web-component) 实现。
 
-The prop names are the same as the data- attributes shown on the [giscus website](<(https://giscus.app/)>), but written in camelCase with the data- prefix and dashes removed.
+属性名称与 [giscus 网站](https://giscus.app/) 上显示的 data- 属性相同，但以小写形式编写，并删除了 data- 前缀并删除了破折号。
 
-You can enable Giscus by adding the following configuration to the config file:
+在配置文件中添加您的 [Giscus](https://giscus.app/) 配置：
 
 ```ts
 {
@@ -187,19 +185,17 @@ You can enable Giscus by adding the following configuration to the config file:
 
 #### Twikoo
 
-You can enable Twikoo by adding the following configuration to the config file:
+在配置文件中添加您的 [Twikoo](https://twikoo.js.org/) 配置：
 
 ```ts
-{
-  comments: {
-    twikoo: {
-      envId: 'your-env-id'
-    }
+comments: {
+  twikoo: {
+    envId: 'your-env-id'
   }
 }
 ```
 
-## Pagespeed Score
+## Pagespeed 分数
 
 [![Pagespeed Score](https://github.com/moeyua/astro-theme-typography/assets/45156493/2272f576-d6ff-49ef-a294-5c2acf365907)](https://pagespeed.web.dev/analysis/https-astro-theme-typography-vercel-app/j34nq9tx0s?form_factor=desktop)
 
