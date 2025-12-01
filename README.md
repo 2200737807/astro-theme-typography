@@ -4,7 +4,7 @@
   <img src='./public/typograph-og.jpg' alt='Typography' width='600'/>
 </p>
 <h6 align='center'>
-<a href="https://astro-theme-typography.vercel.app/">在线预览</a>
+<a href="https://b.103000.vip/">在线预览</a>
 </h6>
 <h5 align='center'>
 <b>此主题系 Hexo 主题 <a href="https://github.com/sumimakito/hexo-theme-typography">活版印字</a> 在 Astro 平台上的移植版本</b>
@@ -23,28 +23,13 @@
 - 支持 Disqus、Giscus、Twikoo 作为评论服务。
 - 支持暗色模式。
 
-## Demo
-
-> 提交一个 PR 来添加你的博客 Demo。
-
-- [Live Demo](https://astro-theme-typography.vercel.app/)
-- [My Blog](https://blog.moeyua.com/)
-- [Julyfun's Blog (用 `bun` 光速搭建这样一个带域名博客)](https://julyfun.fun/posts/%E5%85%89%E9%80%9F%E6%90%AD%E5%BB%BA%E8%BF%99%E6%A0%B7%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/)
-- [Jinx's Blog](https://blog.mytest.cc/)
-- [不那么正经的读书笔记](https://books.beyondxin.top/)
-
 ## 开始使用
 
 这是一个轻巧、响应式设计且对 SEO 友好的 Astro 博客主题。本指南将帮助您开始一个新项目。
 
 ### 快速开始
 
-您可以通过点击右上角的 Fork 按钮，将仓库克隆到你的账号下，点击下面的按钮，选择你刚刚 Fork 的仓库，点击 Import 按钮，即可进入到项目配置页面。
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start)
-
-或者你也可以参考[Astro](https://docs.astro.build/zh-cn/guides/deploy/)的文档，部署到你喜欢的平台。
+你可以参考[Astro](https://docs.astro.build/zh-cn/guides/deploy/)的文档，部署到你喜欢的平台。
 
 ### 添加文章
 
@@ -190,14 +175,3 @@ comments: {
   }
 }
 ```
-
-## Pagespeed 分数
-
-[![Pagespeed Score](https://github.com/moeyua/astro-theme-typography/assets/45156493/2272f576-d6ff-49ef-a294-5c2acf365907)](https://pagespeed.web.dev/analysis/https-astro-theme-typography-vercel-app/j34nq9tx0s?form_factor=desktop)
-
-## TODO
-
-- [ ] WebSub
-- [x] comment
-- [ ] search
-- [ ] analytics
