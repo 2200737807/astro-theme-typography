@@ -1,5 +1,12 @@
-### 🌌 Astro 静态博客搭建终极指南  
-**—— 用银河系最快的SSG构建你的数字花园**  
+---
+title: "🌌 Astro 静态博客搭建终极指南"
+pubDate: 2025.12.01
+categories: ['随便写写']
+description: ''
+slug: astro
+---
+ 
+** 用银河系最快的SSG构建你的数字花园**  
 
 ---
 
