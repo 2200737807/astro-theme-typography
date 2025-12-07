@@ -77,7 +77,7 @@ slug: openclash
 
 以本人所在的城市为例，电信和联通线路的 DNS 延迟都非常低，及时是高峰时段，延迟也只有1-2毫秒，白天的话可以稳定只有 1 毫秒的延迟，这时候还去用 DNS 插件很有可能是负优化  
 
-![](../doc/openclash/pics/pingdns.png)  
+![DNS](https://pic1.imgdb.cn/item/69353a23b747baaa30a18d95.png)  
 
 当然了，我这里和运营商 DNS 在同一个城市，所以延迟表现比较优秀。如果你和运营商 DNS 不是同城的话，延迟可能就没那么优秀了，但一般也会优于第三方 DNS。  
 
@@ -89,21 +89,6 @@ slug: openclash
 
 > 2025.7.22：部分地区，特别是部分地区的联通/移动用户反映运营商服务器存在问题，如遇国内访问不畅，建议切换国内 DOH 服务器来避免运营商的影响。
 
-
-
-### 关于广告过滤  
-
-> 偏门实现方式，目前发现可能存在一些问题，非刚需暂时不推荐，请自行测试是否工作正常。
-
-按照本项目方案，只使用 OpenClash 一个插件，且中国大陆域名均绕过了 OpenClash 内核，因此无法依靠 OpenClash 的规则来完成广告过滤。  
-
-所以本方案使用了 Dnsmasq 来实现广告过滤功能，借助 OpenClash 的“开发者选项”，实现 OpenClash 每次启动时，为 Dnsmasq 拉取最新的广告过滤规则。同时由于 OpenClash 每次启动会重启 Dnsmasq，可以使广告过滤规则即时生效。  
-
-具体本项目 Wiki 中的方案：  
-
-[广告拦截设置方法](4.无插件广告拦截功能设置方案.md)  
-
-**注意：任何 DNS 广告过滤规则的过滤效果都比不上浏览器插件的过滤效果。**  
 
 
 ### 关于 yaml 文件下载  
@@ -158,11 +143,11 @@ OpenWrt 做主路由和旁路由时的设置差异，相关的步骤中会提及
 
 首选确保你的 WAN 口设置中`启用`了`“自动获取 DNS 服务器”`，这样才能获取到运营商下发的 IPv4 DNS  
 
-![](../doc/openclash/pics/wan1.png)  
+![1](https://pic1.imgdb.cn/item/69353a7db747baaa30a18d9b.png)  
 
 然后在 OpenWrt 的首页查看是否取得了运营商下发的 DNS，如果你打算使用其他的国内第三方 DNS，可以跳过此步骤。  
 
-![](../doc/openclash/pics/wan-dns.png)    
+![2](https://pic1.imgdb.cn/item/69353a91b747baaa30a18d9d.png)    
 
 ### 1.2. 关闭 DNS 重定向功能  
 
@@ -172,7 +157,7 @@ OpenWrt 做主路由和旁路由时的设置差异，相关的步骤中会提及
 
 某些固件中可能没有这个选项，忽略该步骤即可。  
 
-![](../doc/openclash/pics/Redirect.png)  
+![3](https://pic1.imgdb.cn/item/69353aa2b747baaa30a18d9e.png)  
 
 ### 1.3. 确保 OpenWrt 可以正常访问 GitHub 或加速 CDN
 
@@ -186,7 +171,7 @@ OpenWrt 做主路由和旁路由时的设置差异，相关的步骤中会提及
 3. 推荐选择 testingcf，该 CDN 是 jsDeliver 的 Cloudflare 线路 CDN，同时建议根据自己的实际网络情况多做尝试
 4. 点击页面下方的 “应用配置” 即可生效  
 ```
-![](../doc/openclash/pics/0.png)  
+![4](https://pic1.imgdb.cn/item/69353abab747baaa30a18d9f.png)  
 
 准备工作完成，开始设置 OpenClash  
 
@@ -217,7 +202,7 @@ Fake-IP（增强）模式可以提供最佳的性能，如果出现了 NAT 问�
 
 目前 OpenClash 默认使用 Meta 内核，如果你的页面上有“使用 Meta 内核”这个切换选项，说明你的 OpenClash 版本太老旧，请先更新插件到最新版。  
 
-![](../doc/openclash/pics/1.png)  
+![5](https://pic1.imgdb.cn/item/69353acfb747baaa30a18da2.png)  
 
 ### 2.2. 流量控制  
 
@@ -225,7 +210,7 @@ Fake-IP（增强）模式可以提供最佳的性能，如果出现了 NAT 问�
 
 启用该功能后，所有包含在 GeoSite 数据库 CN 分类中并且解析 IP 在大陆白名单范围中的域名，都会绕过 Clash 内核进行访问。  
 
-![](../doc/openclash/pics/2.png)  
+![6](https://pic1.imgdb.cn/item/69353addb747baaa30a18da3.png)  
 
 如果你平时要使用 Google Play，请在 `流量控制 > 绕过指定区域 IPv4 黑名单`中添加如下四条域名：  
 
@@ -237,7 +222,7 @@ clientservices.googleapis.com
 ```
 
 
-![](../doc/openclash/pics/blacklist-ipv4.png)  
+![6](https://pic1.imgdb.cn/item/69353af2b747baaa30a18da4.png)  
 
 
 ### 2.3. DNS 设置
@@ -253,8 +238,6 @@ clientservices.googleapis.com
 这里根据自己的需要进行填写（比如填写 DDNS 域名），一般情况下无需使用该功能。   
 
 （图片懒得更新了）  
-
-[](../doc/openclash/pics/3.png)  
 
 
 ### 2.4. 流媒体增强（可选）  
@@ -273,37 +256,12 @@ clientservices.googleapis.com
 
 以图中内容为例，此处设置的为包含关键词为“Netflix”或“奈飞”的策略组探测能够解锁新加坡(SG)区域内容的节点，节点关键词为Singapore。  
 
-![](../doc/openclash/pics/unlock-media.png)  
+![7](https://pic1.imgdb.cn/item/69353b3eb747baaa30a18daa.png)  
 
 在 OpenClash 启动后，会在日志中输出解锁结果  
 
-![](../doc/openclash/pics/stream.png)  
+![8](https://pic1.imgdb.cn/item/69353b55b747baaa30a18db7.png)  
 
-
-### 2.5. IPv6 设置  
-
-> 如果你打算启用 IPv6 功能，并且你的节点支持 IPv6 出站，则按照本项目的方案中的 IPv6 设置方案完成 OpenWrt 的 IPv6 设置后，再设置此页面即可。  
-
-[OpenWrt IPv6 设置方案](https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenWrt-IPv6-设置方案)  
-
-维护者保证设置后 OpenClash 和 IPv6 功能完美兼容。  
-
-旁路由建议放弃 IPv6 功能，或者自己折腾寻找出路。  
-
-如果你的节点不支持 IPv6 出站，或者你的 OpenWrt 没有开启 IPv6 功能，请禁用 `IPv6 流量代理`和禁用`允许 IPv6 类型 DNS 解析`两个功能。    
-
-![](../doc/openclash/pics/4.png)  
-
-如果你启用了此处的 IPv6 功能，并且平时要使用 Google Play，请绕过指定区域 IPv6 黑名单中添加如下四条域名：  
-
-```
-services.googleapis.cn
-googleapis.cn
-xn--ngstr-lra8j.com
-clientservices.googleapis.com
-```  
-
-![](../doc/openclash/pics/blacklist-ipv6.png)  
 
 
 ### 2.6. GEO 数据库订阅  
@@ -320,7 +278,7 @@ clientservices.googleapis.com
 
 设置完后点击页面下方的“保存设置”，然后顺手把三个“检查并更新”按钮都点一遍。在 OpenClash 的“运行日志”页面可以查看更新结果，此操作可以顺带验证你的 OpenWrt 是否能顺利访问 GitHub 或者你在之前设置的 CDN 比如 testingcf.jsdeliver.net  
 
-![](../doc/openclash/pics/5.png)  
+![9](https://pic1.imgdb.cn/item/69353b7db747baaa30a18dbc.png)  
 
 
 ### 2.7. 大陆白名单订阅  
@@ -335,7 +293,7 @@ OpenClash 绕过中国大陆功能使用的 IP 分流名单，必须保持更新
 
 设置完后点击页面下方的`“保存设置”`，然后顺手把`“检查并更新”`按钮点一下。在 OpenClash 的`“运行日志”`页面可以查看更新结果，此操作可以顺带验证你的 OpenWrt 是否能顺利访问 GitHub 或者你在之前设置的 CDN 比如 testingcf  
 
-![](../doc/openclash/pics/6.png)  
+![10](https://pic1.imgdb.cn/item/69353b8cb747baaa30a18dbf.png)  
 
 
 ### 2.8. 版本更新  
@@ -348,7 +306,7 @@ OpenClash 绕过中国大陆功能使用的 IP 分流名单，必须保持更新
 ```
 2025.8.6：目前 OpenClash dev 版本已经上线 Smart 设置功能，如需使用 Smart，建议优先使用 dev 版本
 ```
-![](../doc/openclash/pics/core.png)  
+![11](https://pic1.imgdb.cn/item/69353ba5b747baaa30a18dc2.png)  
 
 PS：本项目维护者日常使用的是 dev 版本的 OpenClash 和 Meta 内核  
 
@@ -394,7 +352,7 @@ SmartDNS 自身的设置中，务必关闭 DNS 劫持，且只需要保留第一
 
 旁路由用户：参考上面的第二种设置，DNS 服务器根据自己实际需要进行选择。  
 
-![](../doc/openclash/pics/7.png)  
+![12](https://pic1.imgdb.cn/item/69353bb2b747baaa30a18dcd.png)  
 
 在本方案中，NameServer 仅负责以下域名的 DNS 解析：
 ```
@@ -419,16 +377,16 @@ SmartDNS 自身的设置中，务必关闭 DNS 劫持，且只需要保留第一
 
 设置完成后，点击页面下方的“保存配置”按钮  
 
-![](../doc/openclash/pics/dns1.png)  
+![13](https://pic1.imgdb.cn/item/69353bdeb747baaa30a18e16.png)  
 
-![](../doc/openclash/pics/dns2.png)  
+![14](https://pic1.imgdb.cn/item/69353befb747baaa30a18e17.png)  
 
 ### 3.2. Meta 设置  
 
 按照图中内容，对红框中的选项进行设置。  
 注意，务必开启`启用 GeoIP Dat 版数据库`选项。  
 
-![](../doc/openclash/pics/8.png)  
+![15](https://pic1.imgdb.cn/item/69353c00b747baaa30a18e18.png)  
 
 ### 3.3. Smart 设置
 
@@ -438,25 +396,18 @@ SmartDNS 自身的设置中，务必关闭 DNS 劫持，且只需要保留第一
 
 如无特殊需求按照图中设置使用插件作者提供的模型即可。如需自己收集训练数据，则启用收集训练数据，此处不做赘述。  
 
-![](../doc/openclash/pics/smart.png)  
+![16](https://pic1.imgdb.cn/item/69353c41b747baaa30a18e2e.png)  
 
 ### 3.4. 规则设置  
 
 如无特殊需求，按照图中所示进行设置。  
 
-![](../doc/openclash/pics/bt.png)
+![17](https://pic1.imgdb.cn/item/69353c49b747baaa30a18e2f.png)
 
 下方的“自定义规则”启用后会出现文本框，可以添加你想附加的规则，规则格式相当丰富，具体格式见文本框内的注释，此处不做赘述。  
 
-![](../doc/openclash/pics/custom_rules.png)
+![18](https://pic1.imgdb.cn/item/69353c55b747baaa30a18e32.png)
 
-如果你的下载设备是 NAS 之类的独立设备，建议在此处通过自定义规则让下载设备的流量全部直连。  
-
-具体参考：[BT 和 PT 等下载流量分流问题](5.故障排除.md#bt-%E5%92%8C-pt-%E7%AD%89%E4%B8%8B%E8%BD%BD%E6%B5%81%E9%87%8F%E5%88%86%E6%B5%81%E9%97%AE%E9%A2%98)
-
-你也可以通过该功能，自己补充自定义规则，指定某些域名直连或代理，以及指定局域网内某些直连或代理等等。  
-
-[如何添加自定义规则](https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/%E5%85%B6%E4%BB%96%E8%AF%B4%E6%98%8E#%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%A7%84%E5%88%99)  
 
 
 ### 3.5. 开发者选项  
@@ -475,11 +426,11 @@ OpenClash 在更新订阅的过程中会短暂重启，所以建议设置在不�
 
 设置好后点击“保存配置”，然后点击“添加”按钮，添加一个订阅  
 
-![](../doc/openclash/pics/10.png)  
+![19](https://pic1.imgdb.cn/item/69353c99b747baaa30a18e3d.png)  
 
 按照图中内容填入订阅信息即可，配置文件名随意填写。  
 
-![](../doc/openclash/pics/11-no.png)  
+![20](https://pic1.imgdb.cn/item/69353ca2b747baaa30a18e3e.png)  
 
 如果你使用的是 Vless、hy2 等较新的格式的节点，请自行测试哪些后端支持此类节点，或者自行填写其他支持你的节点格式的第三方订阅后端（包括本项目后端，或者你自己搭建的后端）。  
 
@@ -489,7 +440,7 @@ OpenClash 在更新订阅的过程中会短暂重启，所以建议设置在不�
 在订阅转换模板中，直接下拉选择本项目的模板。
 如果你的下拉列表中没有本项目的订阅转换模板，请更新 OpenClash 至最新版本
 
-![](../doc/openclash/pics/templates.png) 
+![21](https://pic1.imgdb.cn/item/69353cb9b747baaa30a18e40.png) 
 
 各模板的功能和特性如下：  
     
@@ -556,8 +507,6 @@ https://api.asailor.org/sub
 
 有隐私需求的用户，可以使用 Cloudflare 搭建后端反代服务。  
 
-使用 ImmortalWrt 固件的用户，可以参考以下教程在 ImmortalWrt 中搭建本地订阅转换服务：[ImmortalWrt 下搭建订阅转换后端服务](7.一些零碎的教程.md#11-immortalwrt-%E4%B8%8B%E6%90%AD%E5%BB%BA%E8%AE%A2%E9%98%85%E8%BD%AC%E6%8D%A2%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1)  
-
 ***
 
 ## 5. 启动和启动后的动作
@@ -566,7 +515,7 @@ https://api.asailor.org/sub
 
 点击配置订阅页面中的`“更新配置”`按钮，OpenClash 即开始更新配置并启动  
 
-![](../doc/openclash/pics/start.png)  
+![23](https://pic1.imgdb.cn/item/69353ce3b747baaa30a18e46.png)  
 
 
 ### 5.2. 观察运行日志  
@@ -575,7 +524,7 @@ https://api.asailor.org/sub
 
 出现“OpenClash 启动成功，请等待服务器上线！”后，即表示 OpenClash 已经启动成功  
 
-![](../doc/openclash/pics/ok.png)  
+![24](https://pic1.imgdb.cn/item/69353cedb747baaa30a18e4d.png)  
 
 
 ### 5.3. 切换策略组 
@@ -584,7 +533,7 @@ https://api.asailor.org/sub
 
 OpenClash 内置了多款控制面板，建议根据自己的使用习惯进行选择，新手可以先使用 Dashboard。  
 
-![](../doc/openclash/pics/db1.png)  
+![25](https://pic1.imgdb.cn/item/69353d0eb747baaa30a18e4f.png)  
 
 在控制面版中可以按照个人喜好以及机场节点的情况更改对应分流策略的节点  
 
@@ -598,7 +547,7 @@ OpenClash 内置了多款控制面板，建议根据自己的使用习惯进行�
 
 如果区别很大，说明你使用的后端未能正确拉取远程模板。此问题多见于自建后端，请自行解决网络问题确保后端可以访问远程模板。  
 
-![](../doc/openclash/pics/db2.png)  
+![26](https://pic1.imgdb.cn/item/69353d24b747baaa30a18e50.png)  
 
 至此，OpenClash 已经完美设置完毕，日常使用中几乎不需要打理，且会根据你的设置每日自动更新上游规则，理论上只要不遇到bug，不遇到停电，永远不需要人为操作干预。  
 
@@ -618,7 +567,7 @@ https://ipleak.net/
 
 正常情况下，页面上方应当出现你的机场节点的 IPv4 和 IPv6 地址，页面下方无中国大陆 DNS 出现即为无DNS 泄漏问题  
 
-![](../doc/openclash/pics/ipleak.png)  
+![28](https://pic1.imgdb.cn/item/69353d38b747baaa30a18e52.png)  
 
 注意：DNS 泄漏检测以 https://ipleak.net/ 和 https://browserleaks.com/dns 的检测结果为准  
 
@@ -635,7 +584,7 @@ https://ipleak.net/
 
 网页中的“Address”项目应当显示当前节点的 IPv4 和 IPv6 地址，证明节点的 IPv4 和 IPv6 出站均正常工作  
 
-![](../doc/openclash/pics/test66.png)  
+![29](https://pic1.imgdb.cn/item/69353d52b747baaa30a18e56.png)  
 
 分别访问 IPv6 测试网站 test-ipv6 的国内镜像站点和国外镜像站点  
   
@@ -645,7 +594,7 @@ https://ipleak.net/
 
 访问国内镜像站点时，检测页面上应当出现你的宽带的 IPv4 和 IPv6 地址以及国内运营商名称（比如 CHINA UNICOM 即为中国联通），并且以10/10的评分通过测试  
 
-![](../doc/openclash/pics/ipv61.png)  
+![30](https://pic1.imgdb.cn/item/69353d5db747baaa30a18e58.png)  
 
 
   - 国外 IPv6 测试  
@@ -654,7 +603,7 @@ https://ipleak.net/
 
 开启 OpenClash 的情况下，访问国外镜像站点时，检测页面上应当出现你的机场节点的 IPv4 和 IPv6 地址以及节点服务器的网络运营商名称（比如 Akari Networks 之类的境外网络运营商），并且以10/10的评分通过测试  
 
-![](../doc/openclash/pics/ipv62.png)  
+![31](https://pic1.imgdb.cn/item/69353d71b747baaa30a18e5a.png)  
 
 如果以上两个网站测试均通过，即为 IPv6 已经完美分流  
 
