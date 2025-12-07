@@ -9,7 +9,7 @@ export const userConfig: Partial<UserConfig> = {
   comments: {
     giscus: {
       repo: '2200737807/astro-theme-typography'
-      repoId: 'R_kgDOKy9HOQ'
+      repoId: 'R_kgDOQdeeXg'
       category: 'Blog Post Comments'
       categoryId: 'DIC_kwDOQdeeXs4CzNtE'
       mapping: 'title'
