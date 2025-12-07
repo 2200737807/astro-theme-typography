@@ -124,3 +124,23 @@ DLC: 无硝烟补丁（但还是震得耳朵疼）
 
 **GIT提交备注**  
 `git commit -am "在济州岛往未知方向射出了15颗青春"`
+
+
+<!-- giscus评论 -->
+<div style="margin-top: 20px;"></div>
+<script src="https://giscus.app/client.js"
+        data-repo="2200737807/astro-theme-typography"
+        data-repo-id="R_kgDOQdeeXg"
+        data-category="Blog Post Comments"
+        data-category-id="DIC_kwDOQdeeXs4CzNtE"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="noborder_dark"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>

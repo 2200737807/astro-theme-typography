@@ -634,3 +634,23 @@ https://ipleak.net/
 **请尊重开源社区的基本守则！**  
 
 **感谢合作！**
+
+
+<!-- giscus评论 -->
+<div style="margin-top: 20px;"></div>
+<script src="https://giscus.app/client.js"
+        data-repo="2200737807/astro-theme-typography"
+        data-repo-id="R_kgDOQdeeXg"
+        data-category="Blog Post Comments"
+        data-category-id="DIC_kwDOQdeeXs4CzNtE"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="noborder_dark"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
