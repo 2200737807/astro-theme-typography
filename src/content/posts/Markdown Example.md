@@ -216,3 +216,16 @@ X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 Press <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>Delete</kbd> to end the session.
 
 Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+
+
+<Tabs>
+    <Tab title="第一个选项卡">
+        这是第一个选项卡中的内容.
+    </Tab>
+    <Tab title="第二个选项卡">
+        这是第二个选项卡中的内容.
+    </Tab>
+        <Tab title="第三个选项卡">
+        这是第三个选项卡中的内容.
+    </Tab>
+</Tabs>
